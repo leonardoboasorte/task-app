@@ -16,6 +16,12 @@ describeTe('stes para as funções de gerenciamento de compromissos e tarefas', 
     expect(compromissos[0].data).toBe("2024-04-05");
   });
   
-
+ // Teste para a função adicionarTarefa
+test('Deve adicionar uma nova tarefa à lista de tarefas', () => {
+  adicionarTarefa("Enviar relatório financeiro", "Alta");
+  expect(tarefas.length).toBe(1);
+  expect(tarefas[0].descricao).toBe("Enviar relatório financeiro");
+  expect(tarefas[0].prioridade).toBe("Alta");
+  });
 
 });
