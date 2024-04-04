@@ -24,4 +24,15 @@ test('Deve adicionar uma nova tarefa à lista de tarefas', () => {
   expect(tarefas[0].prioridade).toBe("Alta");
   });
 
+// Teste para a função buscarCompromissoPorTitulo
+test('Deve retornar os compromissos que correspondem ao título fornecido', () => {
+  adicionarCompromisso("Reunião de equipe", "2024-04-05");
+  adicionarCompromisso("Consulta médica", "2024-04-07");
+  const compromissosEncontrados = buscarCompromissoPorTitulo("reunião");
+  expect(compromissosEncontrados.length).toBe(1);
+  expect(compromissosEncontrados[0].titulo).toBe("Reunião de equipe");
 });
+
+});
+
+
