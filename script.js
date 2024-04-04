@@ -51,4 +51,14 @@ class Compromisso {
   // Exemplo de uso das funções de busca
   console.log("Compromissos encontrados:", buscarCompromissoPorTitulo("reunião"));
   console.log("Tarefas de alta prioridade:", buscarTarefaPorPrioridade("Alta"));
+
+  // Exportando as classes e funções
+  module.exports = {
+    Compromisso,
+    Tarefa,
+    adicionarCompromisso,
+    adicionarTarefa,
+    buscarCompromissoPorTitulo,
+    buscarTarefaPorPrioridade
+  };
   

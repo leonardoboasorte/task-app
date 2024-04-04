@@ -1,7 +1,7 @@
 // Importando as classes e funções a serem testadas
-const { Compromisso, Tarefa, adicionarCompromisso, adicionarTarefa, buscarCompromissoPorTitulo, buscarTarefaPorPrioridade } = require('./sua-classe-ou-arquivo');
+const { Compromisso, Tarefa, adicionarCompromisso, adicionarTarefa, buscarCompromissoPorTitulo, buscarTarefaPorPrioridade } = require('../../script.js');
 
-describeTe('stes para as funções de gerenciamento de compromissos e tarefas', () => {
+describe('Testes para as funções de gerenciamento de compromissos e tarefas', () => {
   // Antes de cada teste, limpar as listas de compromissos e tarefas
   beforeEach(() => {
     compromissos = [];
@@ -31,6 +31,15 @@ test('Deve retornar os compromissos que correspondem ao título fornecido', () =
   const compromissosEncontrados = buscarCompromissoPorTitulo("reunião");
   expect(compromissosEncontrados.length).toBe(1);
   expect(compromissosEncontrados[0].titulo).toBe("Reunião de equipe");
+});
+
+ // Teste para a função buscarTarefaPorPrioridade
+ test('Deve retornar as tarefas que correspondem à prioridade fornecida', () => {
+  adicionarTarefa("Enviar relatório financeiro", "Alta");
+  adicionarTarefa("Comprar mantimentos", "Baixa");
+  const tarefasAltaPrioridade = buscarTarefaPorPrioridade("Alta");
+  expect(tarefasAltaPrioridade.length).toBe(1);
+  expect(tarefasAltaPrioridade[0].descricao).toBe("Enviar relatório financeiro");
 });
 
 });

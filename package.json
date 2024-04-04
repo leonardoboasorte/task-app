@@ -2,9 +2,11 @@
   "name": "teste",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "start": "node script.js",
+    "tarefaTeste": "node src/testes/tarefa.test.js"
   },
   "author": "",
   "license": "ISC",
