@@ -1,4 +1,4 @@
-const { Tarefa, adicionarTarefa, buscarTarefaPorPrioridade } = require('./tarefa');
+const { Tarefa, adicionarTarefa, buscarTarefaPorPrioridade } = require('../../tarefa');
 
 // Teste para a classe Tarefa
 test('Criar uma nova tarefa', () => {

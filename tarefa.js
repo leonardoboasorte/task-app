@@ -21,8 +21,4 @@ class Tarefa {
   }
   
   // Exportando a classe e funções relacionadas a tarefas
-  module.exports = {
-    Tarefa,
-    adicionarTarefa,
-    buscarTarefaPorPrioridade
-  };
+  module.exports = { Tarefa, adicionarTarefa, buscarTarefaPorPrioridade };

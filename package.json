@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "start": "node script.js",
-    "tarefaTeste": "node src/testes/tarefa.test.js"
+    "tarefa.test.js": "node src/testes/tarefa.test.js"
   },
   "author": "",
   "license": "ISC",
